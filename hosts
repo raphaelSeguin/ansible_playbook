@@ -1,0 +1,6 @@
+vagrant ansible_host=192.168.1.100 ansible_port=2291
+
+[remote_node]
+vagrant
+
+
