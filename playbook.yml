@@ -1,5 +1,5 @@
 ---
-- hosts: localhost
+- hosts: remote_node
   become: yes
   roles:
   - users
