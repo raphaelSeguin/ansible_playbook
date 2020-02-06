@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  become: yes
+  roles:
+  - users
+  - java
+  - jenkins
+  - maven
+  - apache

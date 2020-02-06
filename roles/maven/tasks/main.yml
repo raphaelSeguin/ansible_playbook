@@ -1,0 +1,11 @@
+---
+# tasks file for maven
+
+- name: download and unarchive 
+  unarchive:
+    src: http://mirrors.standaloneinstaller.com/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz
+    dest: /opt
+    remote_src: true
+
+- name: export env variable
+  command: export PATH=$PATH:/opt/maven/bin

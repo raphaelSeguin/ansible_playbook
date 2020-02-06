@@ -1,0 +1,6 @@
+---
+# vars file for users
+userlist:
+- { name: "jojo", group: "lapins" }
+- { name: "peter", group: "lapins" }
+- { name: "donald", group: "canards" }

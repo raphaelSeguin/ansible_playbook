@@ -1,0 +1,8 @@
+---
+# tasks file for users
+- name: add user
+  user: 
+    name: "{{ item.name }}" 
+    group: "{{ item.group }}"
+  loop: "{{ userlist }}"
+

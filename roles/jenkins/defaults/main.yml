@@ -1,0 +1,10 @@
+---
+# vars file for jenkins
+
+description: Jenkins Daemon
+after: network.target
+type: simple
+environment_var: "JENKINS_HOME=/data/jenkins"
+exec_start: /usr/bin/java -jar /opt/jenkins.war 
+user: jenkins
+wanted_by: multi-user.target
