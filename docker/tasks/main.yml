@@ -1,0 +1,25 @@
+---
+# tasks file for docker
+- name: install docker engine dependencies
+  yum:
+    name: 
+    - yum-utils
+    - device-mapper-persistent-data
+    - lvm2
+    state: present
+- name: install docker engine
+  yum:
+    name:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+    state: present
+    enablerepo: https://download.docker.com/linux/centos/docker-ce.repo
+- name: start service
+  service:
+    name: docker
+    state: started
+- name: enable service
+  service:
+    name: docker
+    enabled: yes
